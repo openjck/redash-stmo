@@ -20,6 +20,9 @@ REMOTE_GROUPS_ALLOWED = set_from_string(
     os.environ.get("REDASH_REMOTE_GROUPS_ALLOWED", "")
 )
 
+# The URL of this Redash instance itself
+REDASH_URL = os.environ.get("REDASH_REDASH_URL", "")
+
 # The base URL of Mozilla's private Iodide instance
 IODIDE_URL = os.environ.get("REDASH_IODIDE_URL", "")
 

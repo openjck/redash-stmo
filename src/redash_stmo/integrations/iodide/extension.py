@@ -31,6 +31,7 @@ class IodideNotebookResource(BaseResource):
         with open(self.TEMPLATE_PATH, "r") as template:
             source = template.read()
             context = {
+                "redash_url": settings.REDASH_URL,
                 "query_id": query_id,
                 "title": query.name,
                 "api_key": settings.IODIDE_DEFAULT_API_KEY,
